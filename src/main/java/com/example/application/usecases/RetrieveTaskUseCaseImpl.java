@@ -7,9 +7,13 @@ public class RetrieveTaskUseCaseImpl implements RetrieveTaskUseCase {
   public RetrieveTaskUseCaseImpl(TaskRepositoryPort taskRepository) {
     this.taskRepositoryPort = TaskRepositoryPort;
   }
+
+
+  @Override
   public List<Task> getAllTasks() {
     return taskRepositoryPort.findAll();
   }
+  @Override
   public Optional<Task> getTask(Long id) {
     return taskRepositoryPort.findById(id);
   }
