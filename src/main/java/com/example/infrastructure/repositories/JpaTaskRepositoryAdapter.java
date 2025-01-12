@@ -1,9 +1,19 @@
 package com.example.infrastructure.repositories;
 
+
+import org.springframework.stereotype.Component;
+
 import com.example.domain.models.Task;
 import com.example.domain.ports.out.TaskRepositoryPort;
+import com.example.infrastructure.entities.TaskEntity;
+import com.example.infrastructure.repositories.JpaTaskRepository;
 
 
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Component
 public class JpaTaskRepositoryAdapter implements TaskRepositoryPort {
    private final JpaTaskRepository jpaTaskRepository;
   public JpaTaskRepositoryAdapter(JpaTaskRepository jpaTaskRepository){
