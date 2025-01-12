@@ -1,7 +1,7 @@
 package com.example.application.services;
 
 
-puiblic class UpdateTaskUseCaseImpl implements UpdateTaskUseCase {
+public class UpdateTaskUseCaseImpl implements UpdateTaskUseCase {
   private final TaskRepositoryPort taskRepositoryPort;
   public UpdateTaskUseCaseImpl(TaskRepositoryPort taskRepositoryPort) {
     this.taskRepositoryPort = taskRepositoryPort;
